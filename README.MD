@@ -5,7 +5,7 @@ Ant Tasks which expose the functionality of the z/OS Connect EE Build Tookit for
 ### Getting started
 
 1. Get a copy of the [z/OS Connect EE Build Toolkit](http://www.ibm.com/support/knowledgecenter/SS4SVW_2.0.0/com.ibm.zosconnect.doc/installing/bt_install.html)
-2. Clone this repository `git clone repo`
+2. Clone this repository `git clone git@github.com:zosconnect/zosconnect-buildtoolkit-ant.git`
 3. Edit the `build.xml` file to point at the location of the build toolkit.
 4. Build the Tasks `ant build.xml`
 
