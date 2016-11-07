@@ -11,34 +11,37 @@ Ant Tasks which expose the functionality of the z/OS Connect EE Build Tookit for
 
 ### Using in a build file
 
- 1. Define the task
- ```
- <taskdef name="sar" classname="com.ibm.zosconnect.sample.ant.Sar">
-    <classpath id="btclasspath">
-        <pathelement path="/path/to/com.ibm.zosconnect.sample.buildtoolkit.task.jar" />
-        <fileset dir="/path/to/zconbt/lib">
-            <include name="*.jar" />
-        </fileset>
-        <fileset dir="/path/to/zconbt/plugins">
-            <include name="*.jar" />
-        </fileset>
-    </classpath>
-</taskdef>
- ```
-2. Build the SAR file
-```
-<target name="build">
-    <sar file="example.sar">
-        <property name="name" value="example" />
-        <property name="version" value="1.0" />
-        <property name="provider" value="rest" />
-        <property name="requestSchemaFile" value="request.json" />
-        <property name="responseSchemaFile" value="response.json" />
-        <property name="uri" value="/example/item" />
-        <property name="connectionRef" value="exampleConn" />
-    </sar>
-</target>
-```
+1. Define the task 
+
+    ```
+    <taskdef name="sar" classname="com.ibm.zosconnect.sample.ant.Sar">
+       <classpath id="btclasspath">
+           <pathelement path="/path/to/com.ibm.zosconnect.sample.buildtoolkit.task.jar" />
+           <fileset dir="/path/to/zconbt/lib">
+               <include name="*.jar" />
+           </fileset>
+           <fileset dir="/path/to/zconbt/plugins">
+               <include name="*.jar" />
+           </fileset>
+       </classpath>
+    </taskdef>
+    ```
+    
+2. Build the SAR file 
+
+    ```
+    <target name="build">
+        <sar file="example.sar">
+            <property name="name" value="example" />
+            <property name="version" value="1.0" />
+            <property name="provider" value="rest" />
+            <property name="requestSchemaFile" value="request.json" />
+            <property name="responseSchemaFile" value="response.json" />
+            <property name="uri" value="/example/item" />
+            <property name="connectionRef" value="exampleConn" />
+        </sar>
+    </target>
+    ```
 
 ### Notice
 
