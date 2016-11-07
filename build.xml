@@ -1,0 +1,19 @@
+<project name="Ant Task for build SAR files using the z/OS Connect Build Toolkit"
+    default="package">
+    <property name="buildtoolkit.location" value="/path/to/buildtoolkit"/>
+    
+    <target name="package" depends="compile">
+        <jar destfile="com.ibm.zosconnect.sample.buildtoolkit.task.jar"></jar>
+    </target>
+    
+    <target name="compile">
+        <javac srcdir="src" destdir="bin" debug="on" includeantruntime="false">
+            <classpath>
+                <pathelement path="${ant.library.dir}/ant.jar"/>
+                <pathelement path="${buildtoolkit.location}/lib/com.ibm.zosconnect.buildtoolkit.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+
+</project>
